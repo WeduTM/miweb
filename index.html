@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation WarSim</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PRELOADER / BOOTING SYSTEM -->
+    <div id="preloader">
+        <div id="click-to-start">Haga click para comenzar</div>
+        <div class="boot-text hidden">
+            <p>> INITIATING OPERATION WARSIM INTERFACE...</p>
+            <p>> ENCRYPTED CONNECTION ESTABLISHED.</p>
+            <p>> LOADING ASSETS...</p>
+            <p>> WELCOME, OPERATIVE.<span class="blinking-cursor">_</span></p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 1: PANTALLA PRINCIPAL -->
+    <header id="hero">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/video/background.mp4" type="video/mp4">
+            Tu navegador no soporta vídeos HTML5.
+        </video>
+        <div class="hero-content">
+            <img src="assets/logo/logo.png" alt="Logo Operation WarSim" class="logo">
+            <h1>La Guerra es Inevitable. La Victoria, una Elección.</h1>
+            <p>Únete a más de 5000 jugadores en el campo de batalla.</p>
+            <a href="#report" class="cta-button" id="start-sim-button">[ > ACCESO A LA SIMULACIÓN ]</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 2: INFORME CLASIFICADO -->
+        <section id="report">
+            <h2>EXPEDIENTE: OPERATION WARSIM</h2>
+            <div class="report-container">
+                <div class="report-column text-column">
+                    <p id="typewriter"></p>
+                    
+                    <!-- NUEVOS CUADROS DE INFORMACIÓN -->
+                    <div class="info-boxes-container">
+                        <div class="info-box">
+                            <h3>NUESTRA HISTORIA</h3>
+                            <p>Desde su creación el 22 de septiembre de 2024, WarSim ha sido el campo de batalla para más de 5000 jugadores. A lo largo de 5 temporadas, hemos evolucionado la narrativa desde la Segunda Guerra Mundial hasta conflictos modernos. La Temporada 3 batió todos los récords, alcanzando picos de más de 100 operadores simultáneos.</p>
+                        </div>
+                        <div class="info-box">
+                            <h3>NUESTRO COMPROMISO</h3>
+                            <p>Reconocido como el servidor #1 de simulación militar en GTA V, destacando por la seriedad de nuestro rol y la dedicación de un equipo administrativo experto y comprometido con la comunidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-column gallery-column">
+                    <div class="main-image">
+                        <img src="assets/images/transport-escort.jpg" alt="Vuelo de reconocimiento">
+                        <span>ASSET: VUELO DE RECONOCIMIENTO</span>
+                    </div>
+                    <div class="image-grid">
+                        <img src="assets/images/tank.jpg" alt="Tanque">
+                        <img src="assets/images/fighter-jet.jpg" alt="Caza">
+                        <img src="assets/images/truck.jpg" alt="Camión Militar">
+                    </div>
+                    <div class="arsenal-section">
+                        <h4>ARSENAL DISPONIBLE</h4>
+                        <div class="arsenal-grid">
+                            <img src="assets/images/weapon1.jpg" alt="Arma 1">
+                            <img src="assets/images/weapon2.jpg" alt="Arma 2">
+                            <img src="assets/images/weapon3.jpg" alt="Arma 3">
+                            <img src="assets/images/weapon4.jpg" alt="Arma 4">
+                            <img src="assets/images/weapon5.jpg" alt="Arma 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: DIRECTRICES OPERACIONALES -->
+        <section id="guidelines">
+            <h2>PROTOCOLO DEL SERVIDOR: DIRECTRICES OPERACIONALES</h2>
+            <div class="guidelines-grid">
+                <div class="guideline-box"><h3>SIMULACIÓN AVANZADA</h3><p>Un entorno de Roleplay serio basado en una simulación de conflicto global. Estrategia y cooperación son la clave.</p></div>
+                <div class="guideline-box"><h3>ESTRUCTURA DE MANDO</h3><p>4 facciones con generales y subdivisiones militares reales: Aérea, Mecanizada, Infantería, Médico, Inteligencia y más.</p></div>
+                <div class="guideline-box"><h3>TECNOLOGÍA ÚNICA</h3><p>Descubre en el campo de batalla un arsenal de scripts y mapeados personalizados que definen nuestra simulación.</p></div>
+                <div class="guideline-box"><h3>PROCESO DE ALISTAMIENTO</h3><p>Sin Whitelist. Accede a nuestro Discord para rellenar tu formulario de personaje y elegir tu facción.</p></div>
+            </div>
+            <a href="https://discord.gg/ypsY8qjZNC" target="_blank" class="cta-button">[ > INICIAR PROCESO DE ALISTAMIENTO ]</a>
+        </section>
+
+        <!-- SECCIÓN 4: CUENTA ATRÁS -->
+        <section id="countdown-section">
+            <h2>INICIO DE LA BATALLA</h2>
+            <div id="countdown">
+                <div class="time-box"><span id="days">00</span>Días</div>
+                <div class="time-box"><span id="hours">00</span>Horas</div>
+                <div class="time-box"><span id="minutes">00</span>Minutos</div>
+                <div class="time-box"><span id="seconds">00</span>Segundos</div>
+            </div>
+            <div class="social-buttons">
+                 <a href="https://discord.gg/ypsY8qjZNC" target="_blank" class="cta-button">[ > UNIRSE AL CENTRO DE MANDO (DISCORD) ]</a>
+                 <a href="https://www.tiktok.com/@operationwarsim" target="_blank" class="cta-button">[ > VER INFORMES DE CAMPO (TIKTOK) ]</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Wedu - 2025 ©</p>
+    </footer>
+
+    <!-- ELEMENTOS DE AUDIO -->
+    <audio id="typing-sound" src="assets/audio/typing.mp3" preload="auto"></audio>
+    <audio id="confirm-sound" src="assets/audio/confirm.mp3" preload="auto"></audio>
+    <audio id="lore-sound" src="assets/audio/lore-typing.mp3" preload="auto"></audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
