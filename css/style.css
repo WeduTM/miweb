@@ -1,0 +1,105 @@
+/* --- CONFIGURACIÓN GLOBAL Y VARIABLES --- */
+:root {
+    --amber: #FFBF00;
+    --dark-bg: #111111;
+    --text-color: #E0E0E0;
+    --border-color: rgba(255, 191, 0, 0.3);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+.hidden { display: none !important; }
+
+body {
+    background-color: var(--dark-bg);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    cursor: cell;
+    overflow-x: hidden;
+}
+body::after {
+    content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3) 1px, transparent 1px, transparent 2px);
+    pointer-events: none; z-index: 9999;
+}
+h1, h2, h3, h4, .cta-button, #countdown { font-family: 'Roboto Mono', monospace; }
+h2 { text-align: center; color: var(--amber); margin-bottom: 40px; font-size: 1.5rem; }
+section { padding: 80px 5%; border-bottom: 1px solid var(--border-color); }
+
+/* --- ESTILOS DEL PRELOADER / BOOTING SYSTEM --- */
+#preloader {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #000; z-index: 10000;
+    display: flex; justify-content: center; align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+#click-to-start {
+    font-family: 'Roboto Mono', monospace; color: var(--amber); font-size: 1.2rem;
+    padding: 20px; border: 1px solid var(--border-color); cursor: pointer;
+    animation: blink-border 2s infinite;
+}
+@keyframes blink-border { 50% { border-color: var(--amber); } }
+.boot-text {
+    font-family: 'Roboto Mono', monospace; color: var(--amber);
+    font-size: 1.2rem; text-align: left; padding: 20px;
+}
+.boot-text p { margin: 10px 0; opacity: 0; animation: fadeInText 0.5s forwards; }
+.boot-text p:nth-child(1) { animation-delay: 0.5s; }
+.boot-text p:nth-child(2) { animation-delay: 1.5s; }
+.boot-text p:nth-child(3) { animation-delay: 2.5s; }
+.boot-text p:nth-child(4) { animation-delay: 3.5s; }
+.blinking-cursor { animation: blink 1s step-end infinite; }
+@keyframes fadeInText { from { opacity: 0; } to { opacity: 1; } }
+@keyframes blink { from, to { color: transparent; } 50% { color: var(--amber); } }
+
+/* --- SECCIÓN 1: HERO --- */
+#hero { height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; position: relative; }
+#bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.4); }
+.hero-content { background: rgba(0, 0, 0, 0.5); padding: 40px; border: 1px solid var(--border-color); }
+.logo { width: 150px; margin-bottom: 20px; }
+.hero-content h1 { font-size: 2rem; color: var(--amber); }
+.hero-content p { font-size: 1.2rem; margin: 15px 0 30px 0; }
+.cta-button {
+    display: inline-block; padding: 15px 30px; background-color: transparent;
+    border: 2px solid var(--amber); color: var(--amber); text-decoration: none;
+    font-weight: bold; transition: background-color 0.3s, color 0.3s;
+}
+.cta-button:hover { background-color: var(--amber); color: var(--dark-bg); }
+
+/* --- SECCIÓN 2: REPORT --- */
+.report-container { display: flex; gap: 40px; flex-wrap: wrap; }
+.report-column { flex: 1; min-width: 300px; }
+.text-column { font-size: 1.1rem; line-height: 1.8; }
+#typewriter { white-space: pre-wrap; }
+.gallery-column .main-image { position: relative; margin-bottom: 20px; }
+.gallery-column img { width: 100%; border: 1px solid var(--border-color); }
+.gallery-column .main-image span {
+    position: absolute; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.7);
+    color: var(--amber); padding: 5px 10px; font-family: 'Roboto Mono', monospace;
+}
+.image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+.arsenal-section { margin-top: 20px; }
+.arsenal-section h4 { color: var(--amber); margin-bottom: 10px; text-align: center; }
+.arsenal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.arsenal-grid img { width: 100%; border: 1px solid var(--border-color); opacity: 0.8; transition: opacity 0.3s; }
+.arsenal-grid img:hover { opacity: 1; }
+
+/* --- NUEVOS ESTILOS PARA CUADROS DE INFO --- */
+.info-boxes-container { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+.info-box { border: 1px solid var(--border-color); padding: 20px; background: rgba(255, 191, 0, 0.05); }
+.info-box h3 { color: var(--amber); margin-bottom: 10px; }
+.info-box p { font-size: 1rem; line-height: 1.6; }
+
+/* --- SECCIÓN 3: GUIDELINES --- */
+#guidelines { text-align: center; }
+.guidelines-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px; text-align: left; }
+.guideline-box { border: 1px solid var(--border-color); padding: 25px; background: rgba(255, 191, 0, 0.05); }
+.guideline-box h3 { color: var(--amber); margin-bottom: 15px; }
+
+/* --- SECCIÓN 4: COUNTDOWN --- */
+#countdown-section { text-align: center; }
+#countdown { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; }
+.time-box { border: 1px solid var(--border-color); padding: 20px 30px; }
+.time-box span { display: block; font-size: 3rem; font-weight: bold; color: var(--amber); }
+.social-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+/* --- FOOTER --- */
+footer { text-align: center; padding: 20px; font-family: 'Roboto Mono', monospace; color: rgba(255, 255, 255, 0.5); }
