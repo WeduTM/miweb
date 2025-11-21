@@ -3,159 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WWebs - Desarrollo Web a Medida</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Operation WarSim</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33NK3RBX6Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-33NK3RBX6Z');
+</script>
 <body>
 
-    <div class="app-layout">
-        <!-- MENÚ LATERAL DE NAVEGACIÓN -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <img src="img/logo.png" alt="WWebs Logo" class="logo">
-                <h1>WWebs</h1>
-            </div>
-            <nav class="sidebar-nav">
-                <a href="#sobre-mi" class="nav-link active"><i class="fas fa-user"></i> Sobre Mí</a>
-                <a href="#portfolio" class="nav-link"><i class="fas fa-briefcase"></i> Portfolio</a>
-                <a href="#valoraciones" class="nav-link"><i class="fas fa-star"></i> Valoraciones</a>
-                <a href="#contacto" class="nav-link"><i class="fas fa-paper-plane"></i> Contacto</a>
-            </nav>
-        </aside>
-
-        <!-- CONTENIDO PRINCIPAL DINÁMICO -->
-        <main class="content">
-
-            <!-- SECCIÓN 1: SOBRE MÍ -->
-            <section id="sobre-mi" class="content-section active">
-                <div class="section-header">
-                    <h2>Transformando Ideas en Realidad Digital</h2>
-                    <p>Creo páginas web limpias, modernas y optimizadas para que tu proyecto, negocio o comunidad destaque en internet.</p>
-                </div>
-                 <div class="features-container">
-                     <div class="feature-card"><div class="icon-container"><i class="fas fa-palette"></i></div><h3>DISEÑO WEB A MEDIDA</h3><p>Creo webs desde cero con una estética limpia y clásica, totalmente personalizadas para reflejar la identidad de tu marca.</p></div>
-                     <div class="feature-card"><div class="icon-container"><i class="fas fa-bolt"></i></div><h3>OPTIMIZACIÓN Y RENDIMIENTO</h3><p>Desarrollo páginas rápidas y fluidas, compatibles con todos los dispositivos, para la mejor experiencia de usuario.</p></div>
-                     <div class="feature-card"><div class="icon-container"><i class="fas fa-euro-sign"></i></div><h3>PRECIOS INMEJORABLES</h3><p>Ofrezco soluciones de alta calidad a precios económicos. **¡Webs desde solo 20€!**</p></div>
-                 </div>
-            </section>
-
-            <!-- SECCIÓN 2: PORTFOLIO -->
-            <section id="portfolio" class="content-section hidden">
-                <div class="section-header">
-                    <h2>Mis Trabajos Recientes</h2>
-                    <p>Cada proyecto es una colaboración para lograr un objetivo. Aquí tienes algunos ejemplos.</p>
-                </div>
-                
-                <div class="portfolio-category">
-                    <div class="section-subtitle"><span><i class="fas fa-gamepad"></i> CATEGORÍA: VIDEOJUEGOS</span></div>
-                    <div class="portfolio-item">
-                        <h3>PlomoLife - Web para Servidor de Roleplay</h3>
-                        <p>El cliente buscaba una web inmersiva para su servidor de GTA V, con una estética oscura, una tipografía fuerte y galerías de imágenes dinámicas para mostrar la acción del juego. El resultado es una página que refleja la intensidad y la comunidad del servidor, incluyendo detalles como un cursor personalizado al gusto del cliente.</p>
-                        <h4>Fotos</h4>
-                        <div class="gallery-grid"><img src="img/portfolio/plomolife/1.png" class="grid-thumbnail" data-modal="plomolife-modal"></div>
-                        <h4>Vídeos</h4>
-                        <div class="video-gallery"><video controls muted loop><source src="videos/plomolife/video1.mp4" type="video/mp4"></video></div>
-                    </div>
-                </div>
-
-                <div class="portfolio-category">
-                    <div class="section-subtitle"><span><i class="fas fa-store"></i> CATEGORÍA: NEGOCIOS</span></div>
-                    <div class="portfolio-item">
-                        <h3>"Dulce Rincón" - Mesas de Chuches</h3>
-                        <p>Una cliente solicitaba una web sencilla, bonita y muy visual para su negocio de mesas de chuches. Se priorizó un diseño limpio que destacara sus productos a través de galerías de fotos y vídeos cortos.</p>
-                        <h4>Fotos</h4>
-                        <div class="gallery-grid"><img src="img/portfolio/chuches/1.png" class="grid-thumbnail" data-modal="chuches-modal"></div>
-                        <h4>Vídeos</h4>
-                        <div class="video-gallery"><video controls muted loop><source src="videos/chuches/video1.mp4" type="video/mp4"></video></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECCIÓN 3: VALORACIONES -->
-            <section id="valoraciones" class="content-section hidden">
-                <div class="section-header">
-                    <h2>Qué Dicen Mis Clientes</h2>
-                    <p>+23 valoraciones reales que respaldan la calidad y el compromiso en cada proyecto.</p>
-                </div>
-                <div class="reviews-grid">
-                    <div class="review-card"><div class="review-author"><img src="img/avatars/avatar1.png"><div><h4>Laura G.</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"Un trabajo impecable. Entendió perfectamente la estética que buscaba y entregó la web en un tiempo récord. ¡Totalmente recomendado!"</p></div>
-                    <div class="review-card"><div class="review-author"><img src="img/avatars/avatar2.png"><div><h4>Carlos M.</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"No creía que pudiera tener una web tan profesional por este precio. La comunicación fue excelente durante todo el proceso. ¡Un 10!"</p></div>
-                    <div class="review-card"><div class="review-author"><img src="img/avatars/avatar3.png"><div><h4>GamingZoneRP</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"Le pedimos detalles muy específicos como un cursor personalizado y música de fondo, y lo implementó todo a la perfección. La comunidad está encantada."</p></div>
-                </div>
-            </section>
-            
-            <!-- SECCIÓN 4: CONTACTO -->
-            <section id="contacto" class="content-section hidden">
-                <div class="section-header">
-                    <h2>Consigue Tu Precio Ya</h2>
-                    <p>Hablemos de tu proyecto. Contacta conmigo sin compromiso.</p>
-                </div>
-                <div class="contact-methods">
-                    <a href="https://discordapp.com/users/wedutm" target="_blank" class="contact-card"><i class="fab fa-discord"></i><span>Discord</span><p>wedutm</p></a>
-                    <a href="https://wa.me/634486006" target="_blank" class="contact-card"><i class="fab fa-whatsapp"></i><span>WhatsApp</span><p>634 48 60 06</p></a>
-                    <a href="mailto:doritorresmolina@gmail.com" class="contact-card"><i class="fas fa-envelope"></i><span>Email</span><p>doritorresmolina@gmail.com</p></a>
-                </div>
-            </section>
-
-        </main>
+    <!-- PRELOADER / BOOTING SYSTEM -->
+    <div id="preloader">
+        <div id="click-to-start">Haga click para comenzar</div>
+        <div class="boot-text hidden">
+            <p>> INITIATING OPERATION WARSIM INTERFACE...</p>
+            <p>> ENCRYPTED CONNECTION ESTABLISHED.</p>
+            <p>> LOADING ASSETS...</p>
+            <p>> WELCOME, OPERATIVE.<span class="blinking-cursor">_</span></p>
+        </div>
     </div>
 
-    <!-- Modals para Galerías (siguen funcionando igual) -->
-    <div id="plomolife-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-main-image"><img src="img/portfolio/plomolife/1.png"></div></div></div>
-    <div id="chuches-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="main-image"><img src="img/portfolio/chuches/1.png"></div></div></div>
+    <!-- SECCIÓN 1: PANTALLA PRINCIPAL -->
+    <header id="hero">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/video/background.mp4" type="video/mp4">
+            Tu navegador no soporta vídeos HTML5.
+        </video>
+        <div class="hero-content">
+            <img src="assets/logo/logo.png" alt="Logo Operation WarSim" class="logo">
+            <h1>La Guerra es Inevitable. La Victoria, una Elección.</h1>
+            <p>Únete a más de 5000 jugadores en el campo de batalla.</p>
+            <a href="#report" class="cta-button" id="start-sim-button">[ > ACCESO A LA SIMULACIÓN ]</a>
+        </div>
+    </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
-            const contentSections = document.querySelectorAll('.content-section');
-            const modals = document.querySelectorAll('.modal-overlay');
-            const gridThumbnails = document.querySelectorAll('.grid-thumbnail');
-            const closeButtons = document.querySelectorAll('.modal-close-button');
-
-            // Lógica para cambiar de sección
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
+    <main>
+        <!-- SECCIÓN 2: INFORME CLASIFICADO -->
+        <section id="report">
+            <h2>EXPEDIENTE: OPERATION WARSIM</h2>
+            <div class="report-container">
+                <div class="report-column text-column">
+                    <p id="typewriter"></p>
                     
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const targetId = this.getAttribute('href').substring(1);
-                    
-                    contentSections.forEach(section => {
-                        if (section.id === targetId) {
-                            section.classList.remove('hidden');
-                            section.classList.add('active');
-                        } else {
-                            section.classList.add('hidden');
-                            section.classList.remove('active');
-                        }
-                    });
-                });
-            });
+                    <!-- NUEVOS CUADROS DE INFORMACIÓN -->
+                    <div class="info-boxes-container">
+                        <div class="info-box">
+                            <h3>NUESTRA HISTORIA</h3>
+                            <p>Desde su creación el 22 de septiembre de 2024, WarSim ha sido el campo de batalla para más de 5000 jugadores. A lo largo de 5 temporadas, hemos evolucionado la narrativa desde la Segunda Guerra Mundial hasta conflictos modernos. La Temporada 3 batió todos los récords, alcanzando picos de más de 100 operadores simultáneos.</p>
+                        </div>
+                        <div class="info-box">
+                            <h3>NUESTRO COMPROMISO</h3>
+                            <p>Reconocido como el servidor #1 de simulación militar en GTA V, destacando por la seriedad de nuestro rol y la dedicación de un equipo administrativo experto y comprometido con la comunidad.</p>
+                        </div>
+                    </div>
+                </div>
 
-            // Lógica para las galerías modales
-            gridThumbnails.forEach(thumb => {
-                thumb.addEventListener('click', function() {
-                    const modalId = this.getAttribute('data-modal');
-                    const modal = document.getElementById(modalId);
-                    if (modal) {
-                        const modalImage = modal.querySelector('.modal-main-image img');
-                        modalImage.src = this.src;
-                        modal.classList.add('active');
-                    }
-                });
-            });
+                <div class="report-column gallery-column">
+                    <div class="main-image">
+                        <img src="assets/images/transport-escort.jpg" alt="Vuelo de reconocimiento">
+                        <span>ASSET: VUELO DE RECONOCIMIENTO</span>
+                    </div>
+                    <div class="image-grid">
+                        <img src="assets/images/tank.jpg" alt="Tanque">
+                        <img src="assets/images/fighter-jet.jpg" alt="Caza">
+                        <img src="assets/images/truck.jpg" alt="Camión Militar">
+                    </div>
+                    <div class="arsenal-section">
+                        <h4>ARSENAL DISPONIBLE</h4>
+                        <div class="arsenal-grid">
+                            <img src="assets/images/weapon1.jpg" alt="Arma 1">
+                            <img src="assets/images/weapon2.jpg" alt="Arma 2">
+                            <img src="assets/images/weapon3.jpg" alt="Arma 3">
+                            <img src="assets/images/weapon4.jpg" alt="Arma 4">
+                            <img src="assets/images/weapon5.jpg" alt="Arma 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            function closeModal(modal) {
-                modal.classList.remove('active');
-            }
+        <!-- SECCIÓN 3: DIRECTRICES OPERACIONALES -->
+        <section id="guidelines">
+            <h2>PROTOCOLO DEL SERVIDOR: DIRECTRICES OPERACIONALES</h2>
+            <div class="guidelines-grid">
+                <div class="guideline-box"><h3>SIMULACIÓN AVANZADA</h3><p>Un entorno de Roleplay serio basado en una simulación de conflicto global. Estrategia y cooperación son la clave.</p></div>
+                <div class="guideline-box"><h3>ESTRUCTURA DE MANDO</h3><p>4 facciones con generales y subdivisiones militares reales: Aérea, Mecanizada, Infantería, Médico, Inteligencia y más.</p></div>
+                <div class="guideline-box"><h3>TECNOLOGÍA ÚNICA</h3><p>Descubre en el campo de batalla un arsenal de scripts y mapeados personalizados que definen nuestra simulación.</p></div>
+                <div class="guideline-box"><h3>PROCESO DE ALISTAMIENTO</h3><p>Sin Whitelist. Accede a nuestro Discord para rellenar tu formulario de personaje y elegir tu facción.</p></div>
+            </div>
+            <a href="https://discord.gg/ypsY8qjZNC" target="_blank" class="cta-button">[ > INICIAR PROCESO DE ALISTAMIENTO ]</a>
+        </section>
 
-            closeButtons.forEach(button => button.addEventListener('click', () => closeModal(button.closest('.modal-overlay'))));
-            modals.forEach(modal => modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal) }));
-        });
-    </script>
+        <!-- SECCIÓN 4: CUENTA ATRÁS -->
+        <section id="countdown-section">
+            <h2>INICIO DE LA BATALLA</h2>
+            <div id="countdown">
+                <div class="time-box"><span id="days">00</span>Días</div>
+                <div class="time-box"><span id="hours">00</span>Horas</div>
+                <div class="time-box"><span id="minutes">00</span>Minutos</div>
+                <div class="time-box"><span id="seconds">00</span>Segundos</div>
+            </div>
+            <div class="social-buttons">
+                 <a href="https://discord.gg/ypsY8qjZNC" target="_blank" class="cta-button">[ > UNIRSE AL CENTRO DE MANDO (DISCORD) ]</a>
+                 <a href="https://www.tiktok.com/@operationwarsim" target="_blank" class="cta-button">[ > VER INFORMES DE CAMPO (TIKTOK) ]</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Wedu - 2025 ©</p>
+    </footer>
+
+    <!-- ELEMENTOS DE AUDIO -->
+    <audio id="typing-sound" src="assets/audio/typing.mp3" preload="auto"></audio>
+    <audio id="confirm-sound" src="assets/audio/confirm.mp3" preload="auto"></audio>
+    <audio id="lore-sound" src="assets/audio/lore-typing.mp3" preload="auto"></audio>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
